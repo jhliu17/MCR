@@ -1,0 +1,6 @@
+from .point_cross_entropy_loss import PointCrossEntropyLoss
+from .rank_cross_entropy_loss import RankCrossEntropyLoss
+from .rank_hinge_loss import RankHingeLoss
+from .rank_group_loss import GroupwiseLoss
+from .rank_adaptive_hinge_loss import AdaptiveRankHingeLoss
+from .rank_fix_hinge_loss import FixedRankHingeLoss
