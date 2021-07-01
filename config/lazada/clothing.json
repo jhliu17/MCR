@@ -150,7 +150,7 @@
         "num_workers": 2
     },
     "test": {
-        "best_checkpoint": "best_multimodal_PRHNet",
+        "best_checkpoint": "best_multimodal",
         "batch_size": 2,
         "allocate_num": 16
     }
