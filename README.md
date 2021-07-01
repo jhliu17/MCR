@@ -37,11 +37,11 @@ Use the following commands to train the model based on the specific configuratio
 # single gpu or data parallel, [ckpt] is optional for continual training
 sh scripts/train.sh device_ids config_file [ckpt]
 
-Sample configuration files are provided in the `config` folder.
-
 # or distributed training
 sh scripts/train_dist.sh device_ids n_procs config_file [ckpt]
 ```
+
+Sample configuration files are provided in the `config` folder.
 
 ### Evaluate
 Do evaluation on a specific dataset based on the saved model checkpoint and corresponding configuration file.
