@@ -2,25 +2,6 @@ import pandas as pd
 import matchzoo
 
 
-def upvotes_map_func(upvote):
-    if upvote >= 16:
-        return 4
-
-    if upvote >= 8:
-        return 3
-
-    if upvote >= 4:
-        return 2
-
-    if upvote >= 2:
-        return 1
-
-    if upvote == 1:
-        return 0
-
-    return -1
-
-
 def _read_data(prd_path,
                rvw_path,
                rel_path,
@@ -49,10 +30,6 @@ def _read_data(prd_path,
     rvw = rvw.reset_index(drop=True)
 
     rel_table['upvotes'] = rel_table['upvotes'].astype(int)
-
-    # mapping upvotes number into different categories
-    rel_table.upvotes = rel_table.upvotes.apply(upvotes_map_func)
-
     rel: pd.DataFrame = pd.DataFrame({
         'id_left': rel_table['product_id'],
         'id_right': rel_table['review_id'],
@@ -60,18 +37,4 @@ def _read_data(prd_path,
     })
     rel.id_left = rel.id_left.astype(str)
     rel = rel.reset_index(drop=True)
-
-    # remove data with 0 upvote (label == -1) as noise
-    zero_upvote_index = rel[rel.label == -1].index
-    rel.drop(index=zero_upvote_index, inplace=True)
-
-    # remove data bofore 2016
-    rel.set_index('id_right')
-    rvw.set_index('id_right')
-    before2016_index = rvw[rvw.time.apply(
-        lambda x: int(x.split(', ')[-1])) <= 2015].index
-    rel.drop(index=before2016_index, inplace=True)
-    rel.reset_index()
-    rvw.reset_index()
-
     return matchzoo.map_pack(prd, rvw, relation=rel, task=task)
