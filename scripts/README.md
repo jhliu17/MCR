@@ -4,7 +4,7 @@
 
 **ICU Tokenizer**
 
-ICU tokenizer supports tokenziation of indonesian and is adopted by [fasttext](https://fasttext.cc).
+ICU tokenizer supports tokenization of Indonesian. This tokenizer is adopted by [fasttext](https://fasttext.cc) for processing multi-lingual corpus.
 
 ```bash
 # conda install icu libarary
@@ -23,7 +23,7 @@ CFLAGS="-std=c++11" pip install ICU-Tokenizer
 
 **Emoji to Lang**
 
-Emoji to Lang is a tool which converts the emoji in different language contexts to according language representations.
+Emoji to Lang is a tool converting the emoji in different language contexts into according language representations.
 
 ```bash
 # clone project
@@ -36,18 +36,18 @@ python setup.py install
 
 **Faster RCNN (bottom-up-attention)**
 
-To extract RoI features from the image, we need to adopt a faster rcnn backbone from [bottom-up-attention.pytorch](https://github.com/MILVLG/bottom-up-attention.pytorch). Please follow their installation document to setup Detectron2, Apex, and Ray.
+To extract RoI features from the image, we need to adopt a faster rcnn backbone from [bottom-up-attention.pytorch](https://github.com/MILVLG/bottom-up-attention.pytorch). Please follow their installation document to setup **Detectron2**, **Apex**, and **Ray**.
 
 
 ## Download Datasets
 
-Make a data folder `dataset` under your project path.
+Make a data folder `dataset` under your project path,
 
 ```bash
 mkdir dataset
 ```
 
-then download the Lazada and Amazon datasets (containing train, dev, and test splits) from [Google Drive](https://drive.google.com/file/d/1XMaospdOeEoXKVuH05YyH038log0lgVx/view?usp=sharing) to `dataset`.
+then download the Lazada and Amazon datasets (containing train, dev, and test splits) from [Google Drive](https://drive.google.com/file/d/1XMaospdOeEoXKVuH05YyH038log0lgVx/view?usp=sharing) to the `dataset` dir.
 
 ```bash
 cd dataset
@@ -56,7 +56,7 @@ unzip MRHPDatasets.zip
 
 ## Datasets Preprocessing
 
-### Step 1: Crawl the product and review image data
+### Step 1: Crawl product and review image data
 
 Set up the dataset path and related global category settings (i.e. `cat`, `dataset_name`) in `crawl_image.py` and then run the following script to crawl image data. By dafault, it starts a multi-threading (max_workers = 100) program to request desired data.
 
@@ -64,9 +64,9 @@ Set up the dataset path and related global category settings (i.e. `cat`, `datas
 python scripts/crawl_data/crawl_image.py
 ```
 
-After crawling, the image resources are saved in `download_dir` path.
+The image resources are saved in `download_dir` path.
 
-### Step 2: Extract the image features
+### Step 2: Extract image features
 
 Copy the feature extraction utils in `scripts/feature_data` dir to the **Faster RCNN (bottom-up-attention)** project folder.
 
