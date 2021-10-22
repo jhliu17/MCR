@@ -2,11 +2,12 @@
 
 Code for the paper "Multi-perspective Coherent Reasoning for Helpfulness Prediction of Multimodal Reviews" (ACL 2021).
 
-If you use this code, please cite the paper using the bibtex reference below.
-```
+If you use this code, please cite the paper using the BibTeX reference below.
+
+```bibtex
 @inproceedings{mcr,
     title={Multi-perspective Coherent Reasoning for Helpfulness Prediction of Multimodal Reviews},
-    author={Junhao Liu and Zhen Hai and Min Yang and Lidong Bing},
+    author={Junhao Liu, Zhen Hai, Min Yang, and Lidong Bing},
     booktitle={Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics, {ACL} 2021},
     year={2021},
 }

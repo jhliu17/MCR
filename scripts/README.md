@@ -75,10 +75,26 @@ cp scripts/feature_data/* [path_of_bottom-up-attention.pytorch]
 cd [path_of_bottom-up-attention.pytorch]
 ```
 
-After setting the gpu env and dataset name, run the extraction script.
+After setting the gpu env and dataset name, run the extraction script to generate RoI features. Dataset path and output path can be modified in `excecute_extraction.sh`.
 
 ```bash
 sh run_feature_extraction.sh [dataset] [gpu]
 ```
 
-Dataset path and output path can be modified in `excecute_extraction.sh`.
+If you use our datasets, please cite these papers using BibTeX references below.
+
+```bibtex
+@inproceedings{mcr,
+    title={Multi-perspective Coherent Reasoning for Helpfulness Prediction of Multimodal Reviews},
+    author={Junhao Liu, Zhen Hai, Min Yang, and Lidong Bing},
+    booktitle={Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics, {ACL} 2021},
+    year={2021},
+}
+
+@inproceedings{amazon18,
+    title={Justifying recommendations using distantly-labeled reviews and fined-grained aspects},
+    author={Jianmo Ni, Jiacheng Li, and Julian McAuley},
+    booktitle={Proceedings of Empirical Methods in Natural Language Processing, {EMNLP} 2019},
+    year={2019},
+}
+```
