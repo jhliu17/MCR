@@ -8,8 +8,8 @@ from download_utils import (
 )
 
 # global setting
-cat = 'home'
-dataset_name = 'lazada'
+cat = 'home'  # ('clothing', 'electronics', 'home')
+dataset_name = 'lazada'  # ('lazada', 'amazon')
 
 
 if __name__ == '__main__':
