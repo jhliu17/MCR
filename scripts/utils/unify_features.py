@@ -67,8 +67,9 @@ def check_pth(features_dir):
                 p = pf['x'].shape[0]
                 if p == 0:
                     raise ValueError
-            except:  
-                print(os.path.join(save_root, f"{f_dir}.pth"), 'contains valid')
+            except:
+                print(os.path.join(
+                    save_root, f"{f_dir}.pth"), 'contains valid')
 
 
 def print_npy(features_dir):
@@ -82,6 +83,9 @@ def print_npy(features_dir):
 
 
 if __name__ == '__main__':
-    # check_pth("/home/junhao.jh/dataset/lazada/clothing_prd_y19/set1/features")
-    restore_npy("/home/junhao.jh/dataset/amazon18/electronics/set1/features")
-    print("Finish!")
+    for dataset in ['lazada', 'amazon']:
+        for cat in ['clothing', 'electronics', 'home']:
+            features_path = "./dataset/%s/%s/images/features" % (dataset, cat)
+            restore_npy(features_path)
+
+    print("Finish unify!")
