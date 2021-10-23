@@ -81,6 +81,14 @@ After setting the gpu env and dataset name, run the extraction script to generat
 sh run_feature_extraction.sh [dataset] [gpu]
 ```
 
+### Step 3: Unify image package with npz
+
+To pack the image features under a review or product, we provide a pack script to unify them.
+
+```bash
+python scripts/utils/unify_features.py
+```
+
 If you use our datasets, please cite these papers using BibTeX references below.
 
 ```bibtex
