@@ -36,7 +36,7 @@ python setup.py install
 
 **Faster RCNN (bottom-up-attention)**
 
-To extract RoI features from the image, we need to adopt a faster rcnn backbone from [bottom-up-attention.pytorch](https://github.com/MILVLG/bottom-up-attention.pytorch). Please follow their installation document to setup **Detectron2**, **Apex**, and **Ray**.
+To extract RoI features from the image, we need to adopt a faster rcnn backbone from [bottom-up-attention.pytorch](https://github.com/MILVLG/bottom-up-attention.pytorch). Please follow their [installation document](https://github.com/MILVLG/bottom-up-attention.pytorch#prerequisites) to setup **Detectron2**, **Apex**, and **Ray**.
 
 
 ## Download Datasets
