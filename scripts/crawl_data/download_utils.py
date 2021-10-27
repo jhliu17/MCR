@@ -18,7 +18,7 @@ def parse_url(string) -> list:
         url = json.loads(string)
     except json.JSONDecodeError:
         return []
-    
+
     if isinstance(url, str):
         url = [url]
     return url
@@ -41,7 +41,7 @@ def get_rvw_prd_url(datapath, key, flatten=False):
                 url = img_url['url']
             filepath = "%s/pic_%d_%d.jpg" % (item_id, total_img, i)
             todo.append((url, filepath))
-    
+
     return todo
 
 
@@ -85,7 +85,7 @@ def clean_invalid_pic(download_path):
     return clean_pic
 
 
-def parse_amazon_url(string) -> list:    
+def parse_amazon_url(string) -> list:
     url = string
     if isinstance(url, str):
         url = [url]
@@ -95,7 +95,7 @@ def parse_amazon_url(string) -> list:
     for u in url:
         if u:
             try:
-                *left, mid, right = u.split(".")
+                *left, _, right = u.split(".")
                 left = ".".join(left)
                 big_url.append(f"{left}.{right}")
             except:
@@ -121,5 +121,5 @@ def get_amazon_rvw_prd_url(datapath, key, flatten=True):
                 url = img_url['url']
             filepath = "%s/pic_%d_%d.jpg" % (item_id, total_img, i)
             todo.append((url, filepath))
-    
+
     return todo

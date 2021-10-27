@@ -4,6 +4,7 @@ from download import (
 from download_utils import (
     get_from_logger,
     get_rvw_prd_url,
+    get_amazon_rvw_prd_url,
     pic_statics
 )
 
@@ -19,6 +20,7 @@ if __name__ == '__main__':
     dest_dir = f"./dataset/{dataset_name}/{cat}/images"
     download_dir = f'{dest_dir}/pictures/%s/%s/'
 
+    get_todo = get_amazon_rvw_prd_url if dataset_name == 'amazon' else get_rvw_prd_url
     for stage in stages:
         for split in splits:
             prd_path = f'{dest_dir}/{cat}.prd.%s' % stage
@@ -34,9 +36,9 @@ if __name__ == '__main__':
 
             # from dataframe
             if split == 'prd':
-                split_to_do = get_rvw_prd_url(prd_path, 'product', True)
+                split_to_do = get_todo(prd_path, 'product', True)
             else:
-                split_to_do = get_rvw_prd_url(rvw_path, 'review')
+                split_to_do = get_todo(rvw_path, 'review')
             total_pic_num = len(split_to_do)
             split_dl.download(split_to_do)
 
