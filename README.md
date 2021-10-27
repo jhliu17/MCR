@@ -1,6 +1,6 @@
 # MCR: Multi-perspective Coherent Reasoning for Helpfulness Prediction of Multimodal Reviews
 
-Code for the paper "Multi-perspective Coherent Reasoning for Helpfulness Prediction of Multimodal Reviews" (ACL 2021).
+Code for the paper "[Multi-perspective Coherent Reasoning for Helpfulness Prediction of Multimodal Reviews](https://aclanthology.org/2021.acl-long.461/)" (ACL 2021).
 
 If you use this code, please cite the paper using the BibTeX reference below.
 
