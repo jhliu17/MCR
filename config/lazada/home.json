@@ -8,6 +8,7 @@
         "dataset": "lazada",
         "language": "indonesian",
         "cat": "home",
+        "read_type": "all",
         "data_dir": "./dataset/lazada/home/",
         "feat_dir": "./dataset/lazada/home/features",
         "save_dir": "./dataset/lazada/home/save",

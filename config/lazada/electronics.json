@@ -8,6 +8,7 @@
         "dataset": "lazada",
         "language": "indonesian",
         "cat": "eletronic",
+        "read_type": "all",
         "data_dir": "./dataset/lazada/eletronic/",
         "feat_dir": "./dataset/lazada/eletronic/features",
         "save_dir": "./dataset/lazada/eletronic/save",
