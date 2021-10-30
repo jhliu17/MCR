@@ -4,7 +4,7 @@ from . import embeddings
 from . import snli
 from . import quora_qp
 from . import lazada
-from . import amazon18
+from . import amazon
 from pathlib import Path
 
 

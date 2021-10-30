@@ -128,7 +128,7 @@ class BasicModeling(BaseModeling):
             if self.rank in (0, -1):
                 train_pack_processed, dev_pack_processed, \
                     test_pack_processed = self._preprocess_data(save_dir)
-                
+
                 if self.rank == 0:
                     dist.barrier()
             else:
@@ -163,8 +163,7 @@ class BasicModeling(BaseModeling):
 
             if k == 'train':
                 logger.info('Build the %s dataset with %d batch size...' % (
-                    k, self.config.train.batch_size * self.config.train.allocate_num
-                )
+                    k, self.config.train.batch_size * self.config.train.allocate_num)
                 )
                 dataset = InstanceDataset(
                     data_pack=self.datapack[k],
