@@ -53,7 +53,7 @@ sh scripts/eval.sh device_ids config_file ckpt
 
 ## Contact
 
-This repo is now under active development, and there may be issues caused by refactoring code. If you have any questions, please feel free to email me at junhaoliu17@gmail.com.
+This repo is now under active development, and there may be issues caused by refactoring code. If you have any questions, please feel free to email me at junhaoliu17@outlook.com.
 
 
 ## Acknowledgments
